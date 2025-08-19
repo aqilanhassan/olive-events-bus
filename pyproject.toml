@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "olive-events-bus"
+version = "1.0.2"
+description = "Olive Events Bus - Enterprise Kafka SDK for Olive Microservices"
+authors = ["Olive Team <dev@olive.com>"]
+readme = "README.md"
+packages = [{include = "olive_events_bus"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiokafka = "^0.11.0"
+pydantic = "^2.5.0"
+structlog = "^23.2.0"
+jsonschema = "^4.20.0"
+typing-extensions = "^4.8.0"
+uuid6 = "^2023.5.2"
+tenacity = "^8.2.3"
+opentelemetry-api = "^1.21.0"
+opentelemetry-sdk = "^1.21.0"
+opentelemetry-instrumentation-kafka-python = "^0.42b0"
+prometheus-client = "^0.21.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+pytest-mock = "^3.12.0"
+black = "^23.11.0"
+ruff = "^0.1.6"
+mypy = "^1.7.1"
+coverage = "^7.3.2"
+types-jsonschema = "^4.25.0.20250809"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "ANN", "S", "B", "A", "COM", "C4", "ICN", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SIM", "TID", "TCH", "ARG", "PTH", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "PERF", "FURB", "LOG", "RUF"]
+ignore = ["ANN101", "ANN102", "ANN401", "S101", "PLR0913", "PLR2004", "COM812", "ISC001"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.coverage.run]
+source = ["olive_events_bus"]
+omit = ["*/tests/*", "*/test_*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]

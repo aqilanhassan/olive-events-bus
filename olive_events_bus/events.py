@@ -27,13 +27,6 @@ class EventType(str, Enum):
     LEAVE_REJECTED = "leave.rejected"
     LEAVE_CANCELLED = "leave.cancelled"
 
-    # Leave events (legacy underscore notation for backward compatibility)
-    LEAVE_CREATED_LEGACY = "leave_created"
-    LEAVE_UPDATED_LEGACY = "leave_updated"
-    LEAVE_APPROVED_LEGACY = "leave_approved"
-    LEAVE_REJECTED_LEGACY = "leave_rejected"
-    LEAVE_CANCELLED_LEGACY = "leave_cancelled"
-
     # Client events
     CLIENT_CREATED = "client.created"
     CLIENT_UPDATED = "client.updated"

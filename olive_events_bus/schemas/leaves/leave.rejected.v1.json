@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://schemas.olive.local/leaves/leave.requested.v1.json",
-  "title": "leaves.leave.requested.v1",
+  "$id": "https://schemas.olive.local/leaves/leave.rejected.v1.json",
+  "title": "leaves.leave.rejected.v1",
   "type": "object",
   "additionalProperties": true,
   "properties": {

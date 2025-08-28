@@ -21,7 +21,7 @@ TOPICS = [
 
 
 def main() -> None:
-    bs = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:9092')
+    bs = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:29092')
     create_topics(bs, TOPICS)
 
 

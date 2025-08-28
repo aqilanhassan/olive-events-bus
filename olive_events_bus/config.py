@@ -12,7 +12,7 @@ class Config:
     Values resolve from environment variables with sensible defaults for local dev.
     """
 
-    bootstrap_servers: str = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:9092')
+    bootstrap_servers: str = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:29092')
     security_protocol: str = os.getenv('KAFKA_SECURITY_PROTOCOL', 'PLAINTEXT')
     sasl_mechanism: str | None = os.getenv('KAFKA_SASL_MECHANISM')
     sasl_username: str | None = os.getenv('KAFKA_SASL_USERNAME')
